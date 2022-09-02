@@ -37,7 +37,7 @@ Column {
     Item {
         id: usernameField
 
-        height: root.font.pointSize * 4.5
+        height: root.font.pointSize * 5.5
         width: parent.width / 2
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -183,7 +183,7 @@ Column {
             text: config.ForceLastUser == "true" ? selectUser.currentText : null
             font.capitalization: config.AllowBadUsernames == "false" ? Font.Capitalize : Font.MixedCase
             anchors.centerIn: parent
-            height: root.font.pointSize * 4
+            height: root.font.pointSize * 5
             width: parent.width
             placeholderText: config.TranslatePlaceholderUsername || textConstants.userName
             selectByMouse: true
@@ -223,14 +223,14 @@ Column {
 
     Item {
         id: passwordField
-        height: root.font.pointSize * 4.5
+        height: root.font.pointSize * 5.5
         width: parent.width / 2
         anchors.horizontalCenter: parent.horizontalCenter
 
         TextField {
             id: password
             anchors.centerIn: parent
-            height: root.font.pointSize * 4
+            height: root.font.pointSize * 5
             width: parent.width
             focus: config.ForcePasswordFocus == "true" ? true : false
             selectByMouse: true
@@ -453,7 +453,7 @@ Column {
 
     Item {
         id: login
-        height: root.font.pointSize * 4
+        height: root.font.pointSize * 5
         width: parent.width / 2
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -461,7 +461,7 @@ Column {
             id: loginButton
             anchors.horizontalCenter: parent.horizontalCenter
             text: config.TranslateLogin || textConstants.login
-            height: root.font.pointSize * 4
+            height: root.font.pointSize * 5
             implicitWidth: parent.width
             enabled: config.AllowEmptyPassword == "true" || username.text != "" && password.text != "" ? true : false
             hoverEnabled: true
