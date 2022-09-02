@@ -52,6 +52,7 @@ Column {
     Label {
         id: dateLabel
         anchors.horizontalCenter: parent.horizontalCenter
+        font.pointSize: root.font.pointSize * 2.5
         color: root.palette.text
         renderType: Text.QtRendering
         function updateTime() {
