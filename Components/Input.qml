@@ -73,7 +73,7 @@ Column {
                 anchors.horizontalCenter: parent.horizontalCenter
                 contentItem: Text {
                     text: model.name
-                    font.pointSize: root.font.pointSize * 0.8
+                    font.pointSize: root.font.pointSize
                     font.capitalization: Font.Capitalize
                     color: selectUser.highlightedIndex === index ? root.palette.highlight.hslLightness >= 0.7 ? "#16161E" : "white" : root.palette.window.hslLightness >= 0.8 ? root.palette.highlight.hslLightness >= 0.8 ? "#16161E" : root.palette.highlight : "white"
                     verticalAlignment: Text.AlignVCenter
@@ -183,7 +183,7 @@ Column {
             text: config.ForceLastUser == "true" ? selectUser.currentText : null
             font.capitalization: config.AllowBadUsernames == "false" ? Font.Capitalize : Font.MixedCase
             anchors.centerIn: parent
-            height: root.font.pointSize * 5
+            height: root.font.pointSize * 4
             width: parent.width
             placeholderText: config.TranslatePlaceholderUsername || textConstants.userName
             selectByMouse: true
@@ -230,7 +230,7 @@ Column {
         TextField {
             id: password
             anchors.centerIn: parent
-            height: root.font.pointSize * 5
+            height: root.font.pointSize * 4
             width: parent.width
             focus: config.ForcePasswordFocus == "true" ? true : false
             selectByMouse: true
@@ -314,7 +314,7 @@ Column {
                 horizontalAlignment: Text.AlignLeft
                 anchors.left: indicator.right
                 anchors.leftMargin: indicator.width / 2
-                font.pointSize: root.font.pointSize * 0.8
+                font.pointSize: root.font.pointSize
                 color: root.palette.text
             }
 
@@ -418,7 +418,7 @@ Column {
             width: parent.width
             text: failed ? config.TranslateLoginFailedWarning || textConstants.loginFailed + "!" : keyboard.capsLock ? config.TranslateCapslockWarning || textConstants.capslockWarning : null
             horizontalAlignment: Text.AlignHCenter
-            font.pointSize: root.font.pointSize * 0.8
+            font.pointSize: root.font.pointSize
             font.italic: true
             color: root.palette.text
             opacity: 0
@@ -453,7 +453,7 @@ Column {
 
     Item {
         id: login
-        height: root.font.pointSize * 5
+        height: root.font.pointSize * 4
         width: parent.width / 2
         anchors.horizontalCenter: parent.horizontalCenter
 
@@ -461,7 +461,7 @@ Column {
             id: loginButton
             anchors.horizontalCenter: parent.horizontalCenter
             text: config.TranslateLogin || textConstants.login
-            height: root.font.pointSize * 5
+            height: root.font.pointSize * 4
             implicitWidth: parent.width
             enabled: config.AllowEmptyPassword == "true" || username.text != "" && password.text != "" ? true : false
             hoverEnabled: true

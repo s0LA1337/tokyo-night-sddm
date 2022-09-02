@@ -118,7 +118,7 @@ Pane {
             contentItem: Text {
                 text: config.TranslateVirtualKeyboardButton || "Virtual Keyboard"
                 color: parent.visualFocus ? palette.highlight : palette.text
-                font.pointSize: root.font.pointSize * 0.8
+                font.pointSize: root.font.pointSize
             }
             background: Rectangle {
                 id: vkbbg

@@ -167,7 +167,7 @@ Item {
         text: config.ForceLastUser == "true" ? selectUser.currentText : null
         font.capitalization: Font.Capitalize
         anchors.centerIn: parent
-        height: root.font.pointSize * 5
+        height: root.font.pointSize * 4
         width: parent.width
         placeholderText: config.TranslateUsernamePlaceholder || textConstants.userName
         selectByMouse: true
